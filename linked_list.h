@@ -11,7 +11,7 @@ typedef struct linked_list_struct* linked_list; //Used to keep track of the firs
 typedef struct linked_list_struct* node; //Used to point any node in the list
 
 linked_list init_linked_list(int data);
-int append_linked_list(linked_list, int data);
+int append_linked_list(linked_list list, int data);
 node get_linked_list_last_element(linked_list start);
 node get_linked_list_second_to_last_element(linked_list start);
 int pop_linked_list(linked_list list, int *error);
