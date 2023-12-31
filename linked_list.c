@@ -53,6 +53,20 @@ node get_linked_list_second_to_last_element(linked_list start){
     return last;
 }
 
+node get_linked_list_nth_element(linked_list start, unsigned int index){
+    if(start->next == start || index < 0){
+        return NULL;
+    }
+    node current = start;
+    for(int i = 0; i < index; ++i){
+        if(current->next == NULL){
+            return NULL;
+        }
+        current = current->next;
+    }
+    return current;
+}
+
 /// @brief add a new element at the end of a linked list
 /// @param list pointer to the first element of the list
 /// @param data the data to be added
@@ -115,4 +129,8 @@ int free_linked_list(linked_list start){
     free(current);
     free(next);
     return 0;
+}
+
+int insert_in_linked_list(linked_list list, int index, int value){
+    return -1;
 }
